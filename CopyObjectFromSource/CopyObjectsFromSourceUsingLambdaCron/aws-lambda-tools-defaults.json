@@ -11,12 +11,11 @@
     "configuration" : "Release",
     "framework"     : "netcoreapp2.1",
     "function-runtime" : "dotnetcore2.1",
-    "function-memory-size" : 512,
-    "function-timeout"     : 15,
-    "function-handler"     : "CopyObjectFromSourceUsingLamdaCron::CopyObjectFromSourceUsingLamdaCron.Function::FunctionHandler",
-    "function-name"        : "CopyObjectFromS3UsingCron",
-    "function-description" : "",
-    "function-role"        : "arn:aws:iam::626924840113:role/lambda_exec_CopyObjectFromS3UsingCron",
+    "function-memory-size" : 256,
+    "function-timeout"     : 30,
+    "function-handler"     : "CopyObjectsFromSourceUsingLambdaCron::CopyObjectsFromSourceUsingLambdaCron.Function::FunctionHandler",
+    "function-name"        : "CopyObjectFromSourceUsingLamdaCron",
+    "function-role"        : "arn:aws:iam::626924840113:role/lambda_exec_CopyObjectFromSourceUsingLamdaCron-0",
     "tracing-mode"         : "PassThrough",
-    "environment-variables" : "\"destinationBucket\"=\"mycopybucketforcronjob\""
+    "environment-variables" : "\"sourceBucket\"=\"mysourcebucket.awsincubation\";\"destinationBucket\"=\"mycopybucketforcronjob\""
 }
